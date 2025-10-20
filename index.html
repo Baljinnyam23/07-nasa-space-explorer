@@ -16,13 +16,31 @@
     <div class="filters">
       <input type="date" id="startDate" />
       <input type="date" id="endDate" />
-      <button>Get Space Images</button>
+      <button id="fetchBtn">Get Space Images</button>
+      <label class="filter-videos"><input type="checkbox" id="includeVideos" checked /> Include Videos</label>
+    </div>
+
+    <!-- Random space fact will appear here -->
+    <div id="spaceFact" class="space-fact" aria-live="polite"></div>
+    <div class="fact-controls">
+      <button id="pauseFacts" aria-pressed="false">Pause Facts</button>
     </div>
 
     <div id="gallery" class="gallery">
       <div class="placeholder">
         <div class="placeholder-icon">🔭</div>
         <p>Select a date range and click "Get Space Images" to explore the cosmos!</p>
+      </div>
+    </div>
+
+    <!-- Modal for detailed APOD view -->
+    <div id="apodModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Close details">✕</button>
+        <div class="modal-media"></div>
+        <h2 class="modal-title"></h2>
+        <p class="modal-date"></p>
+        <p class="modal-explanation"></p>
       </div>
     </div>
   </div>
